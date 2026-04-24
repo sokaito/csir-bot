@@ -1,0 +1,7 @@
+services:
+  - type: cron
+    name: telegram-mcq-bot
+    runtime: python
+    schedule: "0 9 * * *"   # runs daily at 9 AM
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
